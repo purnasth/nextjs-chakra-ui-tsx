@@ -59,7 +59,13 @@ export default function Navbar() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            Logo
+            <Button as={"a"} href="/" variant={"link"}>
+              <img
+                src="https://th.bing.com/th/id/OIP.Ouc81Fd6oU-3vavW6dQB0gHaIR?pid=ImgDet&rs=1"
+                style={{ width: "20px", marginRight: "15px" }}
+              />
+               Purna
+            </Button>
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -78,9 +84,9 @@ export default function Navbar() {
             fontSize={"sm"}
             fontWeight={400}
             variant={"link"}
-            href={"#"}
+            href="/signin"
           >
-            Sign In
+            Login
           </Button>
           <Button
             as={"a"}
@@ -89,7 +95,7 @@ export default function Navbar() {
             fontWeight={600}
             color={"white"}
             bg={"pink.400"}
-            href={"#"}
+            href="/signup"
             _hover={{
               bg: "pink.300",
             }}

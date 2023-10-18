@@ -80,7 +80,7 @@ export default function Contact() {
                         _hover={{ border: "2px solid #1C6FEB" }}
                         leftIcon={<MdLocationOn color="#1970F1" size="20px" />}
                       >
-                        Karnavati, India
+                        Kathmandu, Nepal
                       </Button>
                     </VStack>
                   </Box>
@@ -99,6 +99,9 @@ export default function Contact() {
                       icon={<MdFacebook size="28px" />}
                     />
                     <IconButton
+                      as={"a"}
+                      href={"https://github.com/purnasth"}
+                      target="_blank"
                       aria-label="github"
                       variant="ghost"
                       size="lg"

@@ -4,20 +4,25 @@ import React, { useEffect, useState } from "react";
 const Preloader = () => {
   const [loading, setLoading] = useState(true);
 
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     window.addEventListener("load", () => {
+  //       setLoading(false);
+  //     });
+
+  //     return () => {
+  //       window.removeEventListener("load", () => {
+  //         setLoading(false);
+  //       });
+  //     };
+  //   }
+  // }, []);
+
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("load", () => {
-        setLoading(false);
-      });
-
-      return () => {
-        window.removeEventListener("load", () => {
-          setLoading(false);
-        });
-      };
-    }
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
   }, []);
-
   return loading ? (
     <Box
       display="flex"
@@ -32,7 +37,13 @@ const Preloader = () => {
       bottom="0"
       zIndex="9999"
     >
-      <Spinner thickness="4px" speed="0.65s" color="#0DBA63" size="xl" />
+      <Spinner
+        thickness="4px"
+        speed="0.65s"
+        // emptyColor="gray.200"
+        color="#0DBA63"
+        size="xl"
+      />
     </Box>
   ) : null;
 };

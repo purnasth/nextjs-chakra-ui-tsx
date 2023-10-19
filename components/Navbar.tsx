@@ -9,6 +9,7 @@ import {
   Stack,
   Collapse,
   Icon,
+  Image,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -60,11 +61,15 @@ export default function Navbar() {
             color={useColorModeValue("gray.800", "white")}
           >
             <Button as={"a"} href="/" variant={"link"}>
-              <img
-                src="https://th.bing.com/th/id/OIP.Ouc81Fd6oU-3vavW6dQB0gHaIR?pid=ImgDet&rs=1"
+              <Image
+                alt={"Logo"}
+                src={
+                  "https://th.bing.com/th/id/OIP.Ouc81Fd6oU-3vavW6dQB0gHaIR?pid=ImgDet&rs=1"
+                }
+                objectFit={"cover"}
                 style={{ width: "20px", marginRight: "15px" }}
               />
-               Purna
+              Purna
             </Button>
           </Text>
 
